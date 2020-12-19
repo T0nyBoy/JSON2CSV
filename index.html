@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JSON2CSV</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header"><h1>Converting JSON URL To CSV File</h1></div>
+            <form class="theForm">
+                <label for="url">Enter a JSON URL:</label> 
+                <input class="urlFillIn" type="url" name="url" id="url"
+            placeholder="https://example.com/file.json"
+            size="30"
+            required>
+            <button class="convertButton">Convert to CSV</button>
+            </form>
+            <div class="onError" hidden>There was an error with you JSON data or on the URL</div>
+            <div class="onSuccess" hidden>JSON data succesfully converted</div>
+            
+        </div>
+        
+        <div class="about">
+            <details>
+                <summary>
+                    Hot it works
+                </summary>
+                <p>
+                    Paste an URL and press Convert to CSV.
+                    What you will get is either a message that you successfully converted
+                    the JSON data to CSV, and a prompt to download the CSV file, or 
+                    an error message that the file was not converted either due to 
+                    mistake on the URL or due to the structure of the JSON file.
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    Type of JSON data
+                </summary>
+                <p>
+                    The JSON data should be like:
+                    <br>a,b,c,d <br>
+                    a1,b1,c1,d1 <br>
+                    a2,b2,c2,d2 <br>
+                    a3,b3,c3,d3 <br>
+
+                    It is basically a way to convert back to JSON data,
+                    whatever was exported from my other 
+                    <a href="https://t0nyboy.github.io/CSV2JSON/">CSV  to JSON script</a>
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    Exaple
+                </summary>
+                <p>
+                    You can use the JSON data I have  
+                    <a href="https://raw.githubusercontent.com/T0nyBoy/testing-files/main/test_file.json">here</a> in order to
+                    check how this work and how the data structure should be. <br>
+                    Or you can just try and create your own JSON data with my <a href="https://t0nyboy.github.io/CSV2JSON/">other CSV  to JSON script</a>.
+                </p>
+            </details>
+        </div>
+        
+        
+        <script src="/json2csv.js" async defer></script>
+    </body>
+</html>
